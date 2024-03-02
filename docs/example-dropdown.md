@@ -13,7 +13,7 @@ const parameterValues = aq.from(river)
 ```
 
 ```js
-const selectedParam = view(Inputs.select(parameterValues , {label: "Foo", value: "Suscon"}))
+const selectedParam = view(Inputs.select(parameterValues , { value: "Suscon"}))
 ```
 
 ```js
@@ -22,12 +22,9 @@ const filteredRiver = aq.from(river)
 ```
 
 
-
-## The plot
-
 ```js
 display(Plot.plot({
-    title: "HYDAT stuff",
+    title: `${selectedParam} Values`,
     x: {label: "Date"},
     marks: [
       Plot.lineY(filteredRiver, {
